@@ -5,7 +5,7 @@
 [![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 [![Languages](https://img.shields.io/badge/Languages-FA%20%7C%20EN-orange)](#)
 
-**SAMMER** یک صفحه فرود (Landing Page) مدرن و حرفه‌ای برای معرفی شرکت بازرگانی بین‌المللی است. این صفحه با طراحی مینیمال، کاملاً ریسپانسیو و دوزبانه (فارسی/انگلیسی) ساخته شده و تجربه‌ای جذاب برای کاربران به ارمغان می‌آورد.
+**SAMMER** یک صفحه استقرار (Landing Page) مدرن و حرفه‌ای برای معرفی شرکت بازرگانی بین‌المللی است. این صفحه با طراحی مینیمال، کاملاً ریسپانسیو و دوزبانه (فارسی/انگلیسی) ساخته شده و تجربه‌ای جذاب برای کاربران به ارمغان می‌آورد.
 
 ![SAMMER Preview](preview.png)
 
@@ -39,22 +39,59 @@
 
 ## 📁 ساختار پروژه
 sammer-landing/
-├── index.html # فایل اصلی HTML
-├── style.css # استایل‌های سفارشی و تم‌ها
-├── script.js # تمام منطق جاوااسکریپت
-├── Post2.png # تصویر پس‌زمینه‌ی بخش هیرو
-├── Banner-secondary.png # تصویر بخش درباره ما
-├── favicon/ # فایل‌های آیکون وب‌سایت
-│ ├── favicon-16x16.png
-│ ├── favicon-32x32.png
-│ ├── apple-touch-icon.png
-│ └── site.webmanifest
-├── robots.txt # راهنمای خزنده‌های موتور جستجو
-├── sitemap.xml # نقشه‌ی سایت برای SEO
-└── README.md
+├── 📄 index.html              # فایل اصلی HTML
+├── 🎨 style.css               # استایل‌های سفارشی و تم‌ها
+├── ⚡ script.js               # تمام منطق جاوااسکریپت
+├── 🖼️ Post2.png               # تصویر پس‌زمینه‌ی بخش هیرو
+├── 🖼️ Banner-secondary.png    # تصویر بخش درباره ما
+├── 📁 favicon/                # فایل‌های آیکون وب‌سایت
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── apple-touch-icon.png
+│   └── site.webmanifest
+├── 🤖 robots.txt              # راهنمای خزنده‌های موتور جستجو
+├── 🗺️ sitemap.xml             # نقشه‌ی سایت برای SEO
+└── 📖 README.md               # این فایل
 
 ---
-📞 ارتباط با ما
-وب‌سایت: https://sammer.ir
-ایمیل: info@sammer.com
-تلفن: +98 933 600 2873
+
+## 🧩 نحوه‌ی سفارشی‌سازی
+
+### تغییر محتوای متنی
+- فایل `script.js` را باز کنید.
+- به شیء `translations` بروید و مقادیر مورد نظر را در بخش‌های `fa` (فارسی) و `en` (انگلیسی) ویرایش کنید.
+
+### تغییر تصاویر
+- تصاویر پس‌زمینه: مسیر فایل‌ها را در `style.css` تغییر دهید (کلاس‌های `.hero-bg-image` و `.about-image`).
+- تصویر لوگو: در بخش `.hero-logo` و `.contact-brand` می‌توانید آیکون یا تصویر را عوض کنید.
+
+### تغییر برندها و مشتریان
+- در `script.js`، آرایه‌های `brandsData`، `clientsData` و `careersData` را مطابق نیاز خود ویرایش کنید.
+
+---
+
+## 📸 پیش‌نمایش
+
+| حالت روز (فارسی) | حالت شب (انگلیسی) |
+| :---: | :---: |
+| ![Day-FA](screenshots/day-fa.png) | ![Night-EN](screenshots/night-en.png) |
+
+*(برای نمایش اسکرین‌شات‌ها، یک پوشه‌ی `screenshots/` ایجاد کنید و تصاویر را اضافه نمایید.)*
+
+---
+
+## 📜 مجوز
+
+این پروژه تحت مجوز **MIT** منتشر شده است. برای اطلاعات بیشتر، فایل `LICENSE` را مشاهده کنید.
+
+---
+
+## 📞 ارتباط با ما
+
+- **وب‌سایت رسمی**: [https://sammer.ir](https://sammer.ir)
+- **ایمیل**: info@sammer.ir
+- **تلفن**: +98 933 600 2873
+
+---
+
+**ساخته شده با ❤️ توسط تیم SAMMER**
