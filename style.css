@@ -357,7 +357,7 @@ section:nth-child(even) {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('Banner-secondary.png');
+    background-image: url('banner-secondary.jpg');
     background-size: cover;
     background-position: center;
     transition: all 0.3s;
