@@ -94,4 +94,11 @@ sammer-landing/
 
 ---
 
-**ساخته شده با ❤️ توسط تیم [SAMREL](https://samrel.com)**
+## 👨‍💻 توسعه‌دهنده
+
+این پروژه توسط **[SAMREL](https://samrel.com)** طراحی و پیاده‌سازی شده است.
+
+---
+
+**ساخته شده با ❤️ برای [SAMMER](https://sammer.ir)**
+
