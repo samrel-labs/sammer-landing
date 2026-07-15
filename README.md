@@ -51,7 +51,9 @@ sammer-landing/
 │ └── site.webmanifest
 ├── robots.txt # راهنمای خزنده‌های موتور جستجو
 ├── sitemap.xml # نقشه‌ی سایت برای SEO
-└── README.md # این فایل
+└── README.md
+
+---
 📞 ارتباط با ما
 وب‌سایت: https://sammer.ir
 ایمیل: info@sammer.com
