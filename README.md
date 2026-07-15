@@ -46,19 +46,23 @@ sammer-landing/
 
 ├── ⚡ script.js               # تمام منطق جاوااسکریپت
 
-├── 🖼️ Post2.png               # تصویر پس‌زمینه‌ی بخش هیرو
+├── 🖼️ logo.png               # تصویر پس‌زمینه‌ی بخش هیرو
 
 ├── 🖼️ Banner-secondary.png    # تصویر بخش درباره ما
 
-├── 📁 favicon/                # فایل‌های آیکون وب‌سایت
+├── 📁 screenshots/                # فایل‌های آیکون وب‌سایت
 
-│   ├── favicon-16x16.png
+│   ├── day-fa.png
 
-│   ├── favicon-32x32.png
+│   ├── night-en.png
 
-│   ├── apple-touch-icon.png
+├── favicon-16x16.png
 
-│   └── site.webmanifest
+├── favicon-32x32.png
+
+├── apple-touch-icon.png
+
+├── site.webmanifest
 
 ├── 🤖 robots.txt              # راهنمای خزنده‌های موتور جستجو
 
@@ -88,8 +92,6 @@ sammer-landing/
 | حالت روز (فارسی) | حالت شب (انگلیسی) |
 | :---: | :---: |
 | ![Day-FA](screenshots/day-fa.png) | ![Night-EN](screenshots/night-en.png) |
-
-*(برای نمایش اسکرین‌شات‌ها، یک پوشه‌ی `screenshots/` ایجاد کنید و تصاویر را اضافه نمایید.)*
 
 ---
 
