@@ -39,12 +39,19 @@
 
 ## 📁 ساختار پروژه
 sammer-landing/
+
 ├── 📄 index.html              # فایل اصلی HTML
+
 ├── 🎨 style.css               # استایل‌های سفارشی و تم‌ها
+
 ├── ⚡ script.js               # تمام منطق جاوااسکریپت
+
 ├── 🖼️ Post2.png               # تصویر پس‌زمینه‌ی بخش هیرو
+
 ├── 🖼️ Banner-secondary.png    # تصویر بخش درباره ما
+
 ├── 📁 favicon/                # فایل‌های آیکون وب‌سایت
+
 │   ├── favicon-16x16.png
 │   ├── favicon-32x32.png
 │   ├── apple-touch-icon.png
