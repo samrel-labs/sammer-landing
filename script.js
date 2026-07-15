@@ -118,20 +118,10 @@
     // ---------- داده‌های دو زبانه برای برندها ----------
     const brandsData = {
         fa: [
-            { name: 'سامر تک', desc: 'فناوری اطلاعات و نرم‌افزار', icon: 'fa-laptop-code', link: '#' },
-            { name: 'سامر شیمی', desc: 'تأمین مواد شیمیایی', icon: 'fa-flask', link: '#' },
-            { name: 'سامر صنعت', desc: 'تجهیزات صنعتی', icon: 'fa-industry', link: '#' },
-            { name: 'سامر کشت', desc: 'محصولات کشاورزی', icon: 'fa-seedling', link: '#' },
-            { name: 'سامر خودرو', desc: 'قطعات خودرو', icon: 'fa-car', link: '#' },
-            { name: 'سامر انرژی', desc: 'انرژی و پتروشیمی', icon: 'fa-bolt', link: '#' }
+            { name: 'بسته بندی ارغوان کیش', desc: 'بسته بندی محصولات مختلف', icon: 'fa-thin fa-cubes', link: '#' }
         ],
         en: [
-            { name: 'SAMMER Tech', desc: 'IT & Software', icon: 'fa-laptop-code', link: '#' },
-            { name: 'SAMMER Chem', desc: 'Chemical Supply', icon: 'fa-flask', link: '#' },
-            { name: 'SAMMER Indus', desc: 'Industrial Equipment', icon: 'fa-industry', link: '#' },
-            { name: 'SAMMER Agri', desc: 'Agricultural Products', icon: 'fa-seedling', link: '#' },
-            { name: 'SAMMER Auto', desc: 'Automotive Parts', icon: 'fa-car', link: '#' },
-            { name: 'SAMMER Energy', desc: 'Energy & Petrochemical', icon: 'fa-bolt', link: '#' }
+            { name: 'Kish Arghavan Packaging', desc: 'Packaging different Products', icon: 'fa-thin fa-cubes', link: '#' }
         ]
     };
 
@@ -139,17 +129,13 @@
     const clientsData = {
         fa: [
             { name: 'صنایع آریا', icon: 'fa-building', link: '#' },
-            { name: 'پترو شیمی', icon: 'fa-industry', link: '#' },
             { name: 'بازرگانی پارس', icon: 'fa-shipping-fast', link: '#' },
-            { name: 'ماشین‌سازی نوین', icon: 'fa-cog', link: '#' },
             { name: 'کشاورزی سبز', icon: 'fa-leaf', link: '#' },
             { name: 'توزیع آرمان', icon: 'fa-store', link: '#' }
         ],
         en: [
             { name: 'Aria Industries', icon: 'fa-building', link: '#' },
-            { name: 'Petro Chem', icon: 'fa-industry', link: '#' },
             { name: 'Pars Trading', icon: 'fa-shipping-fast', link: '#' },
-            { name: 'Novin Machinery', icon: 'fa-cog', link: '#' },
             { name: 'Green Agro', icon: 'fa-leaf', link: '#' },
             { name: 'Arman Distribution', icon: 'fa-store', link: '#' }
         ]
@@ -520,9 +506,9 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting && !counted) {
                     counted = true;
-                    animateCounter(statYears, 12, '+', 2000);
-                    animateCounter(statPartners, 40, '+', 2000);
-                    animateCounter(statCountries, 10, '+', 2000);
+                    animateCounter(statYears, 2, '+', 2000);
+                    animateCounter(statPartners, 7, '+', 2000);
+                    animateCounter(statCountries, 5, '+', 2000);
                 }
             });
         }, { threshold: 0.3 });
