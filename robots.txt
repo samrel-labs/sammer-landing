@@ -1,0 +1,10 @@
+# robots.txt for SAMMER
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+Disallow: /temp/
+
+Sitemap: https://sammer.com/sitemap.xml
+Host: https://sammer.com
+
+# Crawl-delay: 1
