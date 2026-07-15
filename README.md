@@ -109,4 +109,4 @@ sammer-landing/
 
 ---
 
-**ساخته شده با ❤️ توسط تیم SAMMER**
+**ساخته شده با ❤️ توسط تیم [SAMREL](https://samrel.com)**
