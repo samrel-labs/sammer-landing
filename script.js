@@ -160,8 +160,8 @@
     };
 
     // ---------- وضعیت ----------
-    let currentLang = 'fa';
-    let currentTheme = 'light';
+    let currentLang = 'en';
+    let currentTheme = 'dark';
 
     // ---------- عناصر DOM ----------
     const themeToggle = document.getElementById('themeToggle');
