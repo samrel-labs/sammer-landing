@@ -105,7 +105,7 @@ sammer-landing/
 
 - **وب‌سایت رسمی**: [https://sammer.ir](https://sammer.ir)
 - **ایمیل**: info@sammer.ir
-- **تلفن**: +98 933 600 2873
+- **تلفن**: 00989336002873
 
 ---
 
