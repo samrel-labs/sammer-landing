@@ -1,4 +1,4 @@
-# 🌐 SAMMER | صفحه فرود رسمی
+# 🌐 SAMMER | صفحه استقرار رسمی
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://[username].github.io/sammer-landing)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
