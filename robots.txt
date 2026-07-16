@@ -4,7 +4,7 @@ Allow: /
 Disallow: /assets/private/
 Disallow: /temp/
 
-Sitemap: https://sammer.com/sitemap.xml
-Host: https://sammer.com
+Sitemap: https://sammer.ir/sitemap.xml
+Host: https://sammer.ir
 
 # Crawl-delay: 1
