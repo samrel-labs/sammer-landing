@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sammer.com/</loc>
+    <loc>https://sammer.ir/</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sammer.com/#about</loc>
+    <loc>https://sammer.ir/#about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sammer.com/#services</loc>
+    <loc>https://sammer.ir/#services</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sammer.com/#brands</loc>
+    <loc>https://sammer.ir/#brands</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sammer.com/#clients</loc>
+    <loc>https://sammer.ir/#clients</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sammer.com/#careers</loc>
+    <loc>https://sammer.ir/#careers</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sammer.com/#contact</loc>
+    <loc>https://sammer.ir/#contact</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
