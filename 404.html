@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحه پیدا نشد | SAMMER</title>
+
+  <!-- ===== فونت Inter ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- ===== Font Awesome ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <style>
+    /* ========== متغیرهای تم (هماهنگ با استایل اصلی) ========== */
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --glass-bg: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(255, 255, 255, 0.3);
+      --bg-nav: rgba(255, 255, 255, 0.9);
+      --transition: 0.3s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      --accent: #3b82f6;
+      --accent-hover: #60a5fa;
+      --glass-bg: rgba(30, 41, 59, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --bg-nav: rgba(15, 23, 42, 0.95);
+    }
+
+    /* ========== ریست و پایه ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background var(--transition), color var(--transition);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ===== پس‌زمینه با اورب‌های متحرک ===== */
+    .error-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.35;
+      animation: floatOrb 28s ease-in-out infinite;
+    }
+    .orb-1 {
+      width: 500px;
+      height: 500px;
+      background: var(--accent);
+      top: -12%;
+      right: -6%;
+      animation-delay: 0s;
+    }
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background: #3b82f6;
+      bottom: -12%;
+      left: -6%;
+      animation-delay: -7s;
+    }
+    .orb-3 {
+      width: 350px;
+      height: 350px;
+      background: #8b5cf6;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: -14s;
+    }
+    [data-theme="dark"] .gradient-orb {
+      opacity: 0.20;
+    }
+
+    @keyframes floatOrb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(50px, -40px) scale(1.15); }
+      66% { transform: translate(-40px, 50px) scale(0.85); }
+    }
+
+    /* ===== کادر اصلی (Glassmorphism) ===== */
+    .error-container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      width: 100%;
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--border-color);
+      border-radius: 40px;
+      padding: 48px 40px 36px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    /* ===== لوگو و برند (با تصویر) ===== */
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .brand-logo {
+      height: 60px;
+      width: auto;
+      border-radius: 12px;
+      display: block;
+    }
+    .brand-logo-fallback {
+      display: none;
+      font-size: 2.8rem;
+      color: var(--accent);
+    }
+    .brand-logo[style*="display: none"] + .brand-logo-fallback {
+      display: block;
+    }
+    .brand-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--accent);
+    }
+
+    /* ===== کد خطا ===== */
+    .error-code {
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 6px 0 2px;
+      letter-spacing: -3px;
+    }
+
+    /* ===== عنوان و توضیح ===== */
+    .error-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .error-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 450px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+
+    /* ===== دکمه‌ها ===== */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 34px;
+      border-radius: 50px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.35);
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 34px;
+      border-radius: 50px;
+      background: transparent;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    }
+
+    /* ===== کنترل‌های زبان و تم ===== */
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .ctrl-btn {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      padding: 8px 20px;
+      border-radius: 30px;
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      backdrop-filter: blur(4px);
+    }
+    .ctrl-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .ctrl-btn i {
+      font-size: 1rem;
+    }
+
+    /* ===== فوتر کوچک ===== */
+    .footer-note {
+      margin-top: 26px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      padding-top: 18px;
+    }
+    .footer-note a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== واکنش‌گرایی ===== */
+    @media (max-width: 600px) {
+      .error-container { padding: 32px 20px 28px; border-radius: 28px; }
+      .error-code { font-size: 5rem; }
+      .error-title { font-size: 1.5rem; }
+      .error-desc { font-size: 0.95rem; }
+      .btn-group { flex-direction: column; width: 100%; }
+      .btn-primary, .btn-outline { width: 100%; justify-content: center; padding: 14px 20px; }
+      .brand-name { font-size: 1.7rem; }
+      .brand-logo { height: 48px; }
+      .brand-logo-fallback { font-size: 2.2rem; }
+    }
+    @media (max-width: 400px) {
+      .error-code { font-size: 3.8rem; }
+      .error-title { font-size: 1.2rem; }
+      .controls { gap: 8px; }
+      .ctrl-btn { font-size: 0.8rem; padding: 6px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== پس‌زمینه ===== -->
+  <div class="error-bg">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
+
+  <!-- ===== کادر اصلی ===== -->
+  <main class="error-container" id="errorContainer">
+
+    <!-- برند با لوگو -->
+    <div class="brand-wrap">
+      <img src="sammer-logo.png" alt="SAMMER" class="brand-logo" onerror="this.style.display='none'" />
+      <i class="fas fa-cube brand-logo-fallback"></i>
+      <span class="brand-name">SAMMER</span>
+    </div>
+
+    <!-- کد خطا -->
+    <div class="error-code">۴۰۴</div>
+
+    <!-- عنوان و توضیح (دو زبانه) -->
+    <h1 class="error-title" id="errorTitle">صفحه پیدا نشد</h1>
+    <p class="error-desc" id="errorDesc">
+      متأسفیم، صفحه‌ای که به دنبال آن هستید وجود ندارد یا به جای دیگری منتقل شده است.
+    </p>
+
+    <!-- دکمه‌ها -->
+    <div class="btn-group">
+      <a href="/" class="btn-primary" id="homeBtn">
+        <i class="fas fa-home"></i>
+        <span>بازگشت به خانه</span>
+      </a>
+      <a href="javascript:history.back()" class="btn-outline" id="backBtn">
+        <i class="fas fa-arrow-right"></i>
+        <span>بازگشت به صفحه قبل</span>
+      </a>
+    </div>
+
+    <!-- کنترل‌ها -->
+    <div class="controls">
+      <button class="ctrl-btn" id="themeToggle">
+        <i class="fas fa-moon"></i>
+        <span id="themeLabel">روز/شب</span>
+      </button>
+      <button class="ctrl-btn" id="langToggle">
+        <i class="fas fa-globe"></i>
+        <span id="langLabel">فا</span>
+      </button>
+    </div>
+
+    <!-- فوتر -->
+    <div class="footer-note">
+      <a href="/">sammer.ir</a> &nbsp;·&nbsp; <span id="footerText">شرکت بازرگانی سامر</span>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ========== دیکشنری ==========
+      const dict = {
+        fa: {
+          title: 'صفحه پیدا نشد',
+          desc: 'متأسفیم، صفحه‌ای که به دنبال آن هستید وجود ندارد یا به جای دیگری منتقل شده است.',
+          home: 'بازگشت به خانه',
+          back: 'بازگشت به صفحه قبل',
+          theme: 'روز/شب',
+          footer: 'شرکت بازرگانی سامر'
+        },
+        en: {
+          title: 'Page Not Found',
+          desc: 'Sorry, the page you are looking for does not exist or has been moved elsewhere.',
+          home: 'Back to Home',
+          back: 'Go Back',
+          theme: 'Day/Night',
+          footer: 'SAMMER Trading Co.'
+        }
+      };
+
+      // ========== عناصر ==========
+      const html = document.documentElement;
+      const titleEl = document.getElementById('errorTitle');
+      const descEl = document.getElementById('errorDesc');
+      const homeBtn = document.getElementById('homeBtn');
+      const backBtn = document.getElementById('backBtn');
+      const langLabel = document.getElementById('langLabel');
+      const themeToggle = document.getElementById('themeToggle');
+      const themeLabel = document.getElementById('themeLabel');
+      const langToggle = document.getElementById('langToggle');
+      const footerText = document.getElementById('footerText');
+
+      let currentLang = 'fa';
+      let currentTheme = 'light';
+
+      // ========== اعمال زبان ==========
+      function setLanguage(lang) {
+        currentLang = lang;
+        const t = dict[lang];
+        titleEl.textContent = t.title;
+        descEl.textContent = t.desc;
+        homeBtn.querySelector('span').textContent = t.home;
+        backBtn.querySelector('span').textContent = t.back;
+        themeLabel.textContent = t.theme;
+        footerText.textContent = t.footer;
+        langLabel.textContent = lang === 'fa' ? 'فا' : 'EN';
+
+        // جهت صفحه
+        html.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
+        html.setAttribute('lang', lang);
+
+        // آیکون دکمه بازگشت
+        const icon = backBtn.querySelector('i');
+        if (lang === 'fa') {
+          icon.className = 'fas fa-arrow-right';
+        } else {
+          icon.className = 'fas fa-arrow-left';
+        }
+
+        localStorage.setItem('sammer-lang-404', lang);
+      }
+
+      // ========== اعمال تم ==========
+      function setTheme(theme) {
+        currentTheme = theme;
+        html.setAttribute('data-theme', theme);
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'dark') {
+          icon.className = 'fas fa-sun';
+        } else {
+          icon.className = 'fas fa-moon';
+        }
+        localStorage.setItem('sammer-theme-404', theme);
+      }
+
+      function toggleTheme() {
+        setTheme(currentTheme === 'light' ? 'dark' : 'light');
+      }
+
+      function toggleLanguage() {
+        setLanguage(currentLang === 'fa' ? 'en' : 'fa');
+      }
+
+      // ========== بارگذاری اولیه ==========
+      // زبان
+      const savedLang = localStorage.getItem('sammer-lang-404');
+      if (savedLang && (savedLang === 'fa' || savedLang === 'en')) {
+        setLanguage(savedLang);
+      } else {
+        const browserLang = navigator.language || navigator.languages?.[0] || 'fa';
+        setLanguage(browserLang.startsWith('fa') ? 'fa' : 'en');
+      }
+
+      // تم
+      const savedTheme = localStorage.getItem('sammer-theme-404');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          setTheme('dark');
+        } else {
+          setTheme('light');
+        }
+      }
+
+      // ========== رویدادها ==========
+      themeToggle.addEventListener('click', toggleTheme);
+      langToggle.addEventListener('click', toggleLanguage);
+
+      backBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.history.back();
+      });
+
+      console.log('✅ صفحه ۴۰۴ سفارشی SAMMER بارگذاری شد.');
+    })();
+  </script>
+
+</body>
+</html>
