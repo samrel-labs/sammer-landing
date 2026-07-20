@@ -865,7 +865,38 @@ footer .social-links a:hover {
     margin-top: 6px;
 }
 
-/* تنظیمات برند اسلایدر برای دکمه */
 .brand-slide .btn-visit {
     margin-top: 8px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+	border-radius: 10px;
+}
+
+.hero-logo-img {
+    height: 70px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+	border-radius: 10px;
+}
+
+.contact-logo-img {
+    height: 50px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.logo,
+.hero-logo,
+.contact-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
